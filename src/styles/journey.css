@@ -1,0 +1,352 @@
+/* ===============================
+   BASE
+================================ */
+
+.journey {
+  background: #f5f3ef; /* ivory */
+  padding: 3rem 2rem;
+  color: #0b0b0b;
+  position: relative;
+  overflow: hidden;
+  /* Luxury pattern overlay */
+  background-image: radial-gradient(rgba(214, 187, 116, 0.25) 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
+}
+
+.journey-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  /* Frame the content to reduce empty feel */
+  border: 1px solid rgba(214, 187, 116, 0.4);
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(4px);
+}
+
+/* ===============================
+   STRUCTURAL FILLERS
+================================ */
+
+/* Vertical journey line */
+.journey-inner::before {
+  content: "";
+  position: absolute;
+  top: 18rem;
+  bottom: 8rem;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(214, 187, 116, 0.5),
+    transparent
+  );
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* ===============================
+   GOLD AMBIENT GLOW (VISIBLE)
+================================ */
+
+.journey::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      420px 260px at 50% 14%,
+      rgba(214, 187, 116, 0.28),
+      rgba(214, 187, 116, 0.12) 40%,
+      transparent 75%
+    ),
+    radial-gradient(
+      360px 320px at 18% 55%,
+      rgba(214, 187, 116, 0.22),
+      rgba(214, 187, 116, 0.10) 45%,
+      transparent 75%
+    ),
+    radial-gradient(
+      360px 320px at 82% 78%,
+      rgba(214, 187, 116, 0.22),
+      rgba(214, 187, 116, 0.10) 45%,
+      transparent 75%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===============================
+   HEADINGS
+================================ */
+
+.journey-eyebrow {
+  text-align: center;
+  font-family: "Playfair Display SC", serif;
+  font-size: 50px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #bfa760;
+  margin-bottom: 0.75rem;
+}
+
+.journey-title {
+  text-align: center;
+  font-size: clamp(2.2rem, 3vw, 2.8rem);
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+/* Gold divider under title */
+.journey-title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d6bb74,
+    transparent
+  );
+  margin: 2.5rem auto 0;
+}
+
+/* ===============================
+   ROW LAYOUT
+================================ */
+
+.journey-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* Soft halo per row */
+.journey-row::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 220px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(214, 187, 116, 0.18),
+    transparent 70%
+  );
+  z-index: 0;
+}
+
+.journey-row:nth-of-type(1)::before {
+  left: 10%;
+}
+
+.journey-row:nth-of-type(2)::before {
+  right: 10%;
+}
+
+.journey-row:nth-of-type(3)::before {
+  left: 12%;
+}
+
+/* Reverse layout (middle row) */
+.journey-row.reverse .journey-image {
+  grid-column: 2;
+}
+
+.journey-row.reverse .journey-content {
+  grid-column: 1;
+  margin-left: auto;
+}
+
+/* ===============================
+   IMAGE + ORNATE FRAME
+================================ */
+
+.journey-image,
+.journey-content {
+  position: relative;
+  z-index: 1;
+}
+
+.ornate-frame {
+  position: relative;
+  padding: 22px;
+  border: 1px solid rgba(214, 187, 116, 0.6);
+  background: #f5f3ef;
+  /* Reduce image size and center */
+  max-width: 340px;
+  margin: 0 auto;
+  box-shadow: 0 20px 40px -10px rgba(214, 187, 116, 0.3);
+}
+
+.ornate-frame::before,
+.ornate-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(214, 187, 116, 0.25);
+  transform: scale(1.04);
+  pointer-events: none;
+}
+
+.ornate-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===============================
+   CONTENT
+================================ */
+
+.journey-content {
+  max-width: 480px;
+  text-align: center;
+}
+
+.journey-gold-title {
+  font-family: "Playfair Display SC", serif;
+  font-size: 30px;
+  color: #d6bb74;
+  margin-bottom: 1rem;
+}
+
+.journey-content p {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: #333;
+}
+
+/* ===============================
+   MICRO DIVIDER (OPTIONAL USE)
+================================ */
+
+.journey-divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d6bb74,
+    transparent
+  );
+  margin: 4rem auto;
+  opacity: 0.6;
+}
+
+/* ===============================
+   ORNAMENTAL DIVIDERS
+================================ */
+
+.journey-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto;
+}
+
+.journey-ornament-line {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #d6bb74, transparent);
+}
+
+.journey-ornament-icon {
+  color: #d6bb74;
+  font-size: 1.4rem;
+  margin: 0 1.5rem;
+  opacity: 0.9;
+}
+
+/* ===============================
+   TEXT DECORATIONS (MINI)
+================================ */
+
+.journey-decor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #d6bb74;
+  font-size: 12px;
+  margin: 1rem 0;
+  opacity: 0.8;
+}
+
+.journey-decor::before,
+.journey-decor::after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: #d6bb74;
+}
+
+/* ===============================
+   ANIMATIONS
+================================ */
+
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.reveal-left {
+  transform: translateX(-60px); /* Slide in from left */
+  transition-delay: 0.1s;
+}
+
+.reveal-right {
+  transform: translateX(60px); /* Slide in from right */
+  transition-delay: 0.2s;
+}
+
+/* Triggered by JS IntersectionObserver */
+.reveal-left.active,
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+  .journey-row,
+  .journey-row.reverse {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .journey-row.reverse .journey-image,
+  .journey-row.reverse .journey-content {
+    grid-column: auto;
+  }
+
+  .journey-row.reverse .journey-image {
+    order: -1;
+  }
+
+  .journey-row::before {
+    display: none;
+  }
+
+  .journey-inner::before {
+    display: none;
+  }
+
+  .journey-content {
+    max-width: 100%;
+  }
+
+  .journey-eyebrow {
+    font-size: 32px;
+    letter-spacing: 0.25em;
+  }
+}

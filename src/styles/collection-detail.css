@@ -1,0 +1,60 @@
+/* ===============================
+   COLLECTION DETAIL
+================================ */
+.collection-detail {
+  background: #f7f5f0;
+}
+
+/* ===============================
+   HERO (TEXT ONLY)
+================================ */
+.collection-hero {
+  padding: 160px 24px 120px;
+}
+
+.collection-hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.collection-kicker {
+  font-size: 0.75rem;
+  letter-spacing: 0.28em;
+  margin-bottom: 20px;
+  display: block;
+  color: #7a7a7a;
+}
+
+.collection-hero h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: #1f1f1f;
+}
+
+.collection-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+  color: #4a4a4a;
+}
+
+.collection-description {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #2b2b2b;
+}
+
+/* ===============================
+   IMAGE SECTION
+================================ */
+.collection-image {
+  padding: 0 64px 160px;
+}
+
+.collection-image img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  display: block;
+}

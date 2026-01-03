@@ -1,0 +1,377 @@
+/* ===============================
+   ABOUT PAGE
+================================ */
+.about-page {
+  background: #f7f5f0; /* ivory */
+}
+
+/* ===============================
+   HERO
+================================ */
+.about-hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.55)
+  );
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #f5f5f5;
+  padding: 120px 24px 0;
+}
+
+.about-kicker {
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #d6bb74;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.about-hero-content h1 {
+  font-family: "Playfair Display SC", serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #f5f5f5;
+}
+/* ===============================
+   THE BEGINNING
+================================ */
+.about-beginning {
+  padding: 140px 24px;
+  background: #f7f5f0;
+}
+
+.about-beginning-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  text-align: left;
+}
+
+.image-frame-gold {
+  position: relative;
+  padding: 1.5rem;
+  border: 1px solid rgba(214, 187, 116, 0.5);
+  background: #fff;
+  box-shadow: 0 20px 40px -10px rgba(214, 187, 116, 0.2);
+}
+
+.image-frame-gold img {
+  width: 100%;
+  display: block;
+  filter: sepia(0.15) contrast(1.05);
+}
+
+.section-title-gold {
+  font-family: "Playfair Display SC", serif;
+  font-size: 2.5rem;
+  color: #d6bb74;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.about-beginning-content p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #2b2b2b;
+  margin-bottom: 24px;
+}
+
+/* Drop Cap for the first letter */
+.drop-cap::first-letter {
+  float: left;
+  font-family: "Playfair Display SC", serif;
+  font-size: 4rem;
+  line-height: 0.8;
+  padding-right: 16px;
+  padding-top: 4px;
+  color: #d6bb74;
+}
+
+/* ===============================
+   THE HANDS BEHIND THE CRAFT
+================================ */
+.about-craft {
+  padding: 140px 64px;
+  background: #f3f1ec;
+}
+
+.about-craft-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 96px;
+  align-items: center;
+}
+
+.about-craft-text {
+  /* Inherits font styles from p tags below to match previous section */
+}
+
+.about-craft-text p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #2b2b2b;
+  margin-bottom: 24px;
+}
+
+.about-craft-text p:last-child {
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+.about-craft-image img {
+  width: 100%;
+  display: block;
+  filter: sepia(0.15) contrast(1.05);
+}
+
+
+/* ===============================
+   MATERIALS WITH MEANING
+================================ */
+.about-materials {
+  padding: 140px 24px;
+  background: #f7f5f0;
+}
+
+.about-materials-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.material-block {
+  margin-bottom: 0;
+  background: #fff;
+  padding: 3rem 2rem;
+  border: 1px solid rgba(214, 187, 116, 0.4);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.material-block:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(214, 187, 116, 0.15);
+  border-color: rgba(214, 187, 116, 0.8);
+}
+
+.material-number {
+  position: absolute;
+  top: -1.5rem;
+  right: -0.5rem;
+  font-family: "Playfair Display SC", serif;
+  font-size: 8rem;
+  color: rgba(214, 187, 116, 0.12);
+  z-index: 0;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.material-block h3 {
+  font-family: "Playfair Display SC", serif;
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.material-block p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #2b2b2b;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .about-beginning,
+  .about-craft,
+  .about-materials {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .about-craft {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .about-materials-inner {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .about-beginning-content {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .about-craft-inner {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    height: 50vh;
+  }
+
+  .about-hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-beginning,
+  .about-craft,
+  .about-materials {
+    padding: 72px 24px;
+  }
+
+  .section-title-gold {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .image-frame-gold {
+    padding: 1rem;
+  }
+
+  .about-craft-inner {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+
+  .material-number {
+    font-size: 5rem;
+  }
+
+  .about-closing {
+    padding: 64px 24px 80px;
+  }
+
+  .about-closing h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* ===============================
+   DECORATIONS
+================================ */
+
+.about-decor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #d6bb74;
+  font-size: 12px;
+  margin: 1rem 0;
+  opacity: 0.8;
+}
+
+.about-decor::before,
+.about-decor::after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: #d6bb74;
+}
+
+/* ===============================
+   CLOSING FRAME
+================================ */
+.about-closing {
+  padding: 80px 24px 100px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  color: #f5f5f5;
+}
+
+.about-closing-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+  z-index: 0;
+}
+
+.about-closing-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.closing-divider {
+  display: block;
+  width: 72px;
+  height: 1px;
+  margin: 0 auto 48px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d6bb74,
+    transparent
+  );
+}
+
+.about-closing h2 {
+  font-size: 2.4rem;
+  line-height: 1.35;
+  font-weight: 400;
+  color: #f5f5f5;
+  margin-bottom: 32px;
+}
+
+.closing-signature {
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(245, 245, 245, 0.7);
+}
