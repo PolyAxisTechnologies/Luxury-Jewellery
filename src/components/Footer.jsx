@@ -50,11 +50,11 @@ export default function Footer() {
         <span>
           © {new Date().getFullYear()}{" "}
           <a
-            href="https://www.manishsukheja.in"
+            href="https://www.polyaxistechnologies.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Manish Sukheja
+            PolyAxis Technologies
           </a>
         </span>
         <span>Crafted with restraint</span>
